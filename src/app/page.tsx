@@ -11,7 +11,7 @@ export default function Home() {
   const portraits = getImages('portraits');
 
   // Select images
-  const heroImage = landscapes.length > 0 ? landscapes[0] : '';
+  const heroImage = landscapes.find(img => img.includes('Lonely Boat')) || (landscapes.length > 0 ? landscapes[0] : '');
   const aboutImage = portraits.length > 0 ? portraits[0] : (landscapes.length > 1 ? landscapes[1] : heroImage);
 
   // Combine remaining images for the gallery, or just mix them
@@ -25,8 +25,11 @@ export default function Home() {
       
       <Hero imagePath={heroImage} />
 
-      <SectionWrapper id="work">
+      <SectionWrapper id="work" className="bg-gray-50">
         <div className="container mx-auto px-6 md:px-12 max-w-7xl">
+          <div className="mb-12 text-center">
+            <h2 className="text-sm md:text-base font-medium tracking-[0.3em] uppercase text-gray-500 mb-4">Archive</h2>
+          </div>
           <WorkGallery images={galleryImages} />
         </div>
       </SectionWrapper>

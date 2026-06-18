@@ -25,18 +25,47 @@ export default function Hero({ imagePath }: { imagePath: string }) {
         )}
       </div>
       
-      <motion.div 
-        className="relative z-10 text-center text-white flex flex-col items-center px-4 drop-shadow-2xl"
-        initial={{ opacity: 0, y: 30 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1.5, delay: 0.5 }}
-      >
-        <h1 className="text-4xl md:text-6xl lg:text-7xl font-light tracking-[0.3em] mb-6 uppercase" style={{ textShadow: '0 2px 20px rgba(0,0,0,0.5)' }}>
+      <div className="relative z-10 text-center text-white flex flex-col items-center px-4 drop-shadow-2xl">
+        <motion.h1 
+          className="text-4xl md:text-6xl lg:text-7xl font-light tracking-[0.3em] mb-6 uppercase" 
+          style={{ textShadow: '0 2px 20px rgba(0,0,0,0.5)' }}
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1.2, delay: 0.5, ease: 'easeOut' }}
+        >
           Antonio Marquez
-        </h1>
-        <p className="text-xs md:text-sm tracking-[0.4em] font-light uppercase opacity-90" style={{ textShadow: '0 2px 10px rgba(0,0,0,0.5)' }}>
+        </motion.h1>
+
+        <motion.div
+          className="h-[1px] bg-white/70 mb-6"
+          initial={{ width: 0, opacity: 0 }}
+          animate={{ width: "80%", opacity: 1 }}
+          transition={{ duration: 1, delay: 1.2, ease: "easeInOut" }}
+        />
+
+        <motion.p 
+          className="text-base md:text-xl tracking-[0.3em] font-medium uppercase text-white" 
+          style={{ textShadow: '0 4px 20px rgba(255,255,255,0.4), 0 2px 10px rgba(0,0,0,0.8)' }}
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1, delay: 1.8, ease: 'easeOut' }}
+        >
           Photography & Visual Storytelling
-        </p>
+        </motion.p>
+      </div>
+
+      <motion.div
+        className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-white/70"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 2.5, duration: 1 }}
+      >
+        <span className="text-[10px] tracking-[0.3em] uppercase">Scroll</span>
+        <motion.div
+          animate={{ y: [0, 8, 0] }}
+          transition={{ repeat: Infinity, duration: 2, ease: "easeInOut" }}
+          className="w-[1px] h-8 bg-white/50"
+        />
       </motion.div>
     </section>
   );

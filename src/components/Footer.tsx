@@ -8,10 +8,9 @@ export default function Footer() {
           © {new Date().getFullYear()} Made by Antonio
         </div>
         <div className="flex gap-8 text-xs uppercase tracking-[0.2em] text-gray-500">
-          <a href="#" className="hover:text-black transition-colors duration-300">Instagram</a>
-          <a href="#" className="hover:text-black transition-colors duration-300">TikTok</a>
-          <a href="#" className="hover:text-black transition-colors duration-300">YouTube</a>
-          <a href="mailto:hello@example.com" className="hover:text-black transition-colors duration-300">Email</a>
+          <a href="https://www.instagram.com/ntonio.marquez/" target="_blank" rel="noopener noreferrer" className="hover:text-black transition-colors duration-300">Instagram</a>
+          <a href="https://www.threads.com/@ntonio.marquez" target="_blank" rel="noopener noreferrer" className="hover:text-black transition-colors duration-300">Threads</a>
+          <a href="mailto:madebyntonio@gmail.com" className="hover:text-black transition-colors duration-300">Email</a>
         </div>
       </div>
     </footer>

@@ -57,7 +57,7 @@ export default function Header() {
           
           {/* Desktop Nav */}
           <nav className={`hidden md:flex gap-10 text-sm uppercase tracking-[0.2em] ${scrolled ? 'text-black' : 'text-white mix-blend-difference'}`}>
-            <button onClick={() => handleNavClick('work')} className="hover:opacity-60 transition-opacity cursor-pointer">Work</button>
+            <button onClick={() => handleNavClick('work')} className="hover:opacity-60 transition-opacity cursor-pointer">Archive</button>
             <button onClick={() => handleNavClick('about')} className="hover:opacity-60 transition-opacity cursor-pointer">About</button>
             <button onClick={() => handleNavClick('contact')} className="hover:opacity-60 transition-opacity cursor-pointer">Contact</button>
           </nav>
@@ -107,7 +107,7 @@ export default function Header() {
                 onClick={() => handleNavClick('work')}
                 className="hover:opacity-60 transition-opacity cursor-pointer"
               >
-                Work
+                Archive
               </motion.button>
               <motion.button
                 initial={{ opacity: 0, y: 15 }}
