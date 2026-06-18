@@ -5,7 +5,7 @@ import Image from 'next/image';
 
 export default function Hero({ imagePath }: { imagePath: string }) {
   return (
-    <section id="hero" className="relative w-full h-screen flex items-center justify-center overflow-hidden">
+    <section id="hero" className="relative w-full h-[100dvh] flex items-center justify-center overflow-hidden">
       <div className="absolute inset-0 w-full h-full bg-black">
         {imagePath && (
           <motion.div 
