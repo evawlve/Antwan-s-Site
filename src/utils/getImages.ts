@@ -1,15 +1,29 @@
-import fs from 'fs';
-import path from 'path';
-
 export function getImages(category: 'landscapes' | 'portraits'): string[] {
-  const directoryPath = path.join(process.cwd(), 'public', category);
-  try {
-    const files = fs.readdirSync(directoryPath);
-    return files
-      .filter((file) => /\.(jpg|jpeg|png|webp|avif)$/i.test(file))
-      .map((file) => `/${category}/${file}`);
-  } catch (error) {
-    console.error(`Error reading directory ${directoryPath}:`, error);
-    return [];
+  if (category === 'landscapes') {
+    return [
+      '/landscapes/GREEN AND PURPLE.jpg',
+      '/landscapes/Lonely Boat.jpg',
+      '/landscapes/ZZ000260.jpg',
+      '/landscapes/_DSC0002.jpg',
+      '/landscapes/_DSC0257.jpg',
+      '/landscapes/_DSC0271.jpg',
+      '/landscapes/_DSC0524.jpg',
+      '/landscapes/_SNY0028.jpg',
+      '/landscapes/_SNY0349.jpg',
+    ];
+  } else {
+    return [
+      '/portraits/ZZ000238.jpg',
+      '/portraits/ZZ000243.jpg',
+      '/portraits/ZZ000244.jpg',
+      '/portraits/ZZ000249.jpg',
+      '/portraits/_DSC0259.jpg',
+      '/portraits/_DSC0263.jpg',
+      '/portraits/_DSC0520.jpg',
+      '/portraits/_DSC0522.jpg',
+      '/portraits/_SNY0738.jpg',
+      '/portraits/_SNY0744.jpg',
+    ];
   }
 }
+

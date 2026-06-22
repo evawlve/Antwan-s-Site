@@ -54,7 +54,14 @@ export default function ProjectShowcase() {
   );
 }
 
-function ProjectTile({ project, className, index }: { project: any, className: string, index: number }) {
+interface Project {
+  id: string;
+  title: string;
+  category: string;
+  image: string;
+}
+
+function ProjectTile({ project, className, index }: { project: Project, className: string, index: number }) {
   return (
     <motion.div
       className={`relative overflow-hidden group cursor-pointer ${className}`}
