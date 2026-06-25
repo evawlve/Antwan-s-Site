@@ -12,7 +12,7 @@ export default function Home() {
 
   // Select images
   const heroImage = landscapes.find(img => img.includes('Lonely Boat')) || (landscapes.length > 0 ? landscapes[0] : '');
-  const aboutImage = portraits.length > 0 ? portraits[0] : (landscapes.length > 1 ? landscapes[1] : heroImage);
+  const aboutImage = '/bio.jpg';
 
   // Combine remaining images for the gallery, or just mix them
   const galleryImages = [...landscapes, ...portraits].filter(

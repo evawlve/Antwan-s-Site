@@ -17,9 +17,15 @@ export default function About({ portraitImage }: { portraitImage: string }) {
           </div>
         )}
       </div>
-      <div className="w-full md:w-7/12">
-        <p className="text-2xl md:text-3xl lg:text-4xl font-light leading-snug tracking-wide text-gray-900">
-          Based in South Lake Tahoe, Antonio captures cinematic landscapes, portraits, and visual stories inspired by atmosphere, movement, and emotion.
+      <div className="w-full md:w-7/12 space-y-6">
+        <p className="text-xl md:text-2xl lg:text-3xl font-light leading-relaxed tracking-wide text-gray-900">
+          Born and raised in South Lake Tahoe, Antonio is a Mexican-American landscape and portrait film photographer based in Los Angeles.
+        </p>
+        <p className="text-xl md:text-2xl lg:text-3xl font-light leading-relaxed tracking-wide text-gray-800">
+          His work explores the interconnectedness between nature and humanity.
+        </p>
+        <p className="text-xl md:text-2xl lg:text-3xl font-light leading-relaxed tracking-wide text-gray-800">
+          He is available for commercial and editorial commissions.
         </p>
       </div>
     </div>
