@@ -1,36 +1,73 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# MadeByAntonio - Portfolio & Blog Website
 
-## Getting Started
+Welcome to the **MadeByAntonio** website repository!
 
-First, run the development server:
+---
+
+## 🌟 How the Blog & Website Workflow Works
+
+There are **two distinct types of updates**:
+1. **Blog Posts & Photos** (Writing stories)
+2. **Code & Design Changes** (Modifying website layouts, colors, components)
+
+---
+
+### A. Publishing New Blog Posts (No Git / Push Needed!)
+
+When you write or edit blog posts, **you do NOT need to run any git commands or push to GitHub**.
+
+1. Open your Sanity Studio:
+   ```bash
+   cd ~/studio-blog
+   npm run dev
+   ```
+   Open `http://localhost:3333` in your browser.
+2. Create or edit a post under **Blog Post**.
+3. Click the green **Publish** button.
+
+**How it goes live**:
+Sanity saves your post to **Sanity Cloud**. Your live Vercel website connects directly to Sanity Cloud, so your new post appears live on your website (`madebyantonio.com`) **automatically and instantly** as soon as you hit Publish!
+
+---
+
+### B. Making Code / Design Changes & Backing Up to GitHub
+
+When you edit **website files** (like `Header.tsx`, `page.tsx`, CSS, or components) on your computer and want to back them up to GitHub and deploy to your live website:
+
+Open Terminal in your website folder (`cd ~/Antwan-s-Site-main`) and run these 3 simple commands:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git add .
+git commit -m "Updated website header and layout"
+git push
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+**How it goes live**:
+As soon as you run `git push`, GitHub updates your repository, and **Vercel automatically detects the push and deploys your updated website in ~30 seconds!**
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Local Development Quickstart
 
-## Learn More
+Run both servers locally while working on your computer:
 
-To learn more about Next.js, take a look at the following resources:
+- **Sanity Studio (CMS Editor)**:
+  ```bash
+  cd ~/studio-blog
+  npm run dev
+  # Open http://localhost:3333
+  ```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- **Website Preview**:
+  ```bash
+  cd ~/Antwan-s-Site-main
+  npm run dev
+  # Open http://localhost:3000
+  ```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
+## GitHub Repositories
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- **Website Repository**: [https://github.com/ntoniomarquez/antwan-website](https://github.com/ntoniomarquez/antwan-website)
+- **Sanity Studio Repository**: [https://github.com/ntoniomarquez/studio-blog](https://github.com/ntoniomarquez/studio-blog)
