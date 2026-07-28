@@ -47,6 +47,16 @@ As soon as you run `git push`, GitHub updates your repository, and **Vercel auto
 
 ---
 
+## Environment Variables on Vercel
+
+Make sure the following variables are set in your Vercel Project Settings -> Environment Variables:
+
+- `NEXT_PUBLIC_SANITY_PROJECT_ID` = `a6jyb7zg`
+- `NEXT_PUBLIC_SANITY_DATASET` = `production`
+- `NEXT_PUBLIC_SANITY_API_VERSION` = `2024-01-01`
+
+---
+
 ## Local Development Quickstart
 
 Run both servers locally while working on your computer:
