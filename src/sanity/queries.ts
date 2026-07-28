@@ -9,8 +9,9 @@ export interface Post {
   body?: any
 }
 
+// Fetches published posts for the public blog index
 export async function getPosts(): Promise<Post[]> {
-  const query = `*[_type == "post"] | order(publishedAt desc) {
+  const query = `*[_type == "post" && !(_id in path("drafts.**"))] | order(publishedAt desc) {
     _id,
     title,
     slug,
@@ -20,9 +21,10 @@ export async function getPosts(): Promise<Post[]> {
   return await client.fetch(query)
 }
 
+// Fetches the post by slug (prioritizing published, but allows local preview)
 export async function getPostBySlug(slug: string): Promise<Post | null> {
   const decodedSlug = decodeURIComponent(slug)
-  const query = `*[_type == "post" && (slug.current == $slug || slug.current == $decodedSlug)][0] {
+  const query = `*[_type == "post" && (slug.current == $slug || slug.current == $decodedSlug)] | order(_updatedAt desc)[0] {
     _id,
     title,
     slug,
