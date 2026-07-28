@@ -69,7 +69,7 @@ export default function Header() {
           <nav className={`hidden md:flex gap-10 text-sm uppercase tracking-[0.2em] ${isDarkNav ? 'text-black' : 'text-white mix-blend-difference'}`}>
             <button onClick={() => handleNavClick('work')} className="hover:opacity-60 transition-opacity cursor-pointer">Archive</button>
             <button onClick={() => handleNavClick('about')} className="hover:opacity-60 transition-opacity cursor-pointer">About</button>
-            <Link href="/blog" className="hover:opacity-60 transition-opacity cursor-pointer normal-case">Blog</Link>
+            <Link href="/blog" className="hover:opacity-60 transition-opacity cursor-pointer">Blog</Link>
             <button onClick={() => handleNavClick('contact')} className="hover:opacity-60 transition-opacity cursor-pointer">Contact</button>
           </nav>
 
@@ -137,7 +137,7 @@ export default function Header() {
                 <Link
                   href="/blog"
                   onClick={() => setIsOpen(false)}
-                  className="hover:opacity-60 transition-opacity cursor-pointer normal-case"
+                  className="hover:opacity-60 transition-opacity cursor-pointer"
                 >
                   Blog
                 </Link>
