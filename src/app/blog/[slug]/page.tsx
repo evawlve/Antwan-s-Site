@@ -57,14 +57,11 @@ export default async function BlogPostPage({ params }: PageProps) {
 
             {heroImageUrl && (
               <figure className="mt-8 mb-12">
-                <div className="relative w-full aspect-[16/10] bg-gray-100 overflow-hidden rounded-sm">
-                  <Image
+                <div className="w-full flex justify-center bg-gray-50 overflow-hidden rounded-sm">
+                  <img
                     src={heroImageUrl}
                     alt={post.heroImage?.alt || post.title}
-                    fill
-                    priority
-                    className="object-cover"
-                    sizes="(max-width: 1024px) 100vw, 1000px"
+                    className="w-full max-h-[85vh] object-contain"
                   />
                 </div>
                 {post.heroImage?.caption && (

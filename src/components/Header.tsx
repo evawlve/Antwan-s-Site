@@ -66,11 +66,11 @@ export default function Header() {
           </Link>
           
           {/* Desktop Nav */}
-          <nav className={`hidden md:flex gap-10 text-sm uppercase tracking-[0.2em] ${isDarkNav ? 'text-black' : 'text-white mix-blend-difference'}`}>
-            <button onClick={() => handleNavClick('work')} className="hover:opacity-60 transition-opacity cursor-pointer">Archive</button>
-            <button onClick={() => handleNavClick('about')} className="hover:opacity-60 transition-opacity cursor-pointer">About</button>
-            <Link href="/blog" className="hover:opacity-60 transition-opacity cursor-pointer">Blog</Link>
-            <button onClick={() => handleNavClick('contact')} className="hover:opacity-60 transition-opacity cursor-pointer">Contact</button>
+          <nav className={`hidden md:flex gap-10 text-sm tracking-[0.2em] ${isDarkNav ? 'text-black' : 'text-white mix-blend-difference'}`}>
+            <button onClick={() => handleNavClick('work')} className="hover:opacity-60 transition-opacity cursor-pointer uppercase">Archive</button>
+            <button onClick={() => handleNavClick('about')} className="hover:opacity-60 transition-opacity cursor-pointer uppercase">About</button>
+            <button onClick={() => handleNavClick('blog-preview')} className="hover:opacity-60 transition-opacity cursor-pointer normal-case">Blog</button>
+            <button onClick={() => handleNavClick('contact')} className="hover:opacity-60 transition-opacity cursor-pointer uppercase">Contact</button>
           </nav>
 
           {/* Mobile Nav Toggle */}
@@ -110,13 +110,13 @@ export default function Header() {
             transition={{ duration: 0.3 }}
             className="fixed inset-0 z-40 bg-white/95 backdrop-blur-lg flex flex-col items-center justify-center"
           >
-            <nav className="flex flex-col items-center gap-8 text-2xl uppercase tracking-[0.2em] text-black">
+            <nav className="flex flex-col items-center gap-8 text-2xl tracking-[0.2em] text-black">
               <motion.button
                 initial={{ opacity: 0, y: 15 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.1, duration: 0.4 }}
                 onClick={() => handleNavClick('work')}
-                className="hover:opacity-60 transition-opacity cursor-pointer"
+                className="hover:opacity-60 transition-opacity cursor-pointer uppercase"
               >
                 Archive
               </motion.button>
@@ -125,29 +125,25 @@ export default function Header() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.2, duration: 0.4 }}
                 onClick={() => handleNavClick('about')}
-                className="hover:opacity-60 transition-opacity cursor-pointer"
+                className="hover:opacity-60 transition-opacity cursor-pointer uppercase"
               >
                 About
               </motion.button>
-              <motion.div
+              <motion.button
                 initial={{ opacity: 0, y: 15 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.25, duration: 0.4 }}
+                onClick={() => handleNavClick('blog-preview')}
+                className="hover:opacity-60 transition-opacity cursor-pointer normal-case"
               >
-                <Link
-                  href="/blog"
-                  onClick={() => setIsOpen(false)}
-                  className="hover:opacity-60 transition-opacity cursor-pointer"
-                >
-                  Blog
-                </Link>
-              </motion.div>
+                Blog
+              </motion.button>
               <motion.button
                 initial={{ opacity: 0, y: 15 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.3, duration: 0.4 }}
                 onClick={() => handleNavClick('contact')}
-                className="hover:opacity-60 transition-opacity cursor-pointer"
+                className="hover:opacity-60 transition-opacity cursor-pointer uppercase"
               >
                 Contact
               </motion.button>

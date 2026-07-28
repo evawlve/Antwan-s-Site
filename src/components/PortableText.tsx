@@ -1,5 +1,4 @@
 import { PortableText as PortableTextComponent } from '@portabletext/react'
-import Image from 'next/image'
 import { urlFor } from '@/sanity/image'
 
 const components = {
@@ -10,13 +9,11 @@ const components = {
       }
       return (
         <figure className="my-10">
-          <div className="relative w-full aspect-[16/10] overflow-hidden rounded-sm bg-gray-100">
-            <Image
-              src={urlFor(value).width(1200).url()}
+          <div className="w-full flex justify-center bg-gray-50 overflow-hidden rounded-sm">
+            <img
+              src={urlFor(value).width(1600).url()}
               alt={value.alt || 'Blog Image'}
-              fill
-              className="object-cover"
-              sizes="(max-width: 768px) 100vw, 800px"
+              className="w-full max-h-[85vh] object-contain"
             />
           </div>
           {value.caption && (
