@@ -58,7 +58,7 @@ export default function Header() {
         <div className="container mx-auto px-6 md:px-12 flex justify-between items-center">
           <Link
             href="/"
-            className={`text-lg font-medium tracking-[0.2em] uppercase transition-colors z-50 ${
+            className={`text-lg font-medium tracking-[0.2em] lowercase transition-colors z-50 ${
               isDarkNav ? 'text-black' : 'text-white mix-blend-difference'
             }`}
           >
@@ -66,11 +66,11 @@ export default function Header() {
           </Link>
           
           {/* Desktop Nav */}
-          <nav className={`hidden md:flex gap-10 text-sm tracking-[0.2em] ${isDarkNav ? 'text-black' : 'text-white mix-blend-difference'}`}>
-            <button onClick={() => handleNavClick('work')} className="hover:opacity-60 transition-opacity cursor-pointer uppercase">Archive</button>
-            <button onClick={() => handleNavClick('about')} className="hover:opacity-60 transition-opacity cursor-pointer uppercase">About</button>
-            <button onClick={() => handleNavClick('blog-preview')} className="hover:opacity-60 transition-opacity cursor-pointer normal-case">Blog</button>
-            <button onClick={() => handleNavClick('contact')} className="hover:opacity-60 transition-opacity cursor-pointer uppercase">Contact</button>
+          <nav className={`hidden md:flex gap-10 text-sm tracking-[0.2em] lowercase ${isDarkNav ? 'text-black' : 'text-white mix-blend-difference'}`}>
+            <button onClick={() => handleNavClick('work')} className="hover:opacity-60 transition-opacity cursor-pointer lowercase">archive</button>
+            <button onClick={() => handleNavClick('about')} className="hover:opacity-60 transition-opacity cursor-pointer lowercase">about</button>
+            <button onClick={() => handleNavClick('blog-preview')} className="hover:opacity-60 transition-opacity cursor-pointer lowercase">blog</button>
+            <button onClick={() => handleNavClick('contact')} className="hover:opacity-60 transition-opacity cursor-pointer lowercase">contact</button>
           </nav>
 
           {/* Mobile Nav Toggle */}
@@ -110,42 +110,42 @@ export default function Header() {
             transition={{ duration: 0.3 }}
             className="fixed inset-0 z-40 bg-white/95 backdrop-blur-lg flex flex-col items-center justify-center"
           >
-            <nav className="flex flex-col items-center gap-8 text-2xl tracking-[0.2em] text-black">
+            <nav className="flex flex-col items-center gap-8 text-2xl tracking-[0.2em] lowercase text-black">
               <motion.button
                 initial={{ opacity: 0, y: 15 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.1, duration: 0.4 }}
                 onClick={() => handleNavClick('work')}
-                className="hover:opacity-60 transition-opacity cursor-pointer uppercase"
+                className="hover:opacity-60 transition-opacity cursor-pointer lowercase"
               >
-                Archive
+                archive
               </motion.button>
               <motion.button
                 initial={{ opacity: 0, y: 15 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.2, duration: 0.4 }}
                 onClick={() => handleNavClick('about')}
-                className="hover:opacity-60 transition-opacity cursor-pointer uppercase"
+                className="hover:opacity-60 transition-opacity cursor-pointer lowercase"
               >
-                About
+                about
               </motion.button>
               <motion.button
                 initial={{ opacity: 0, y: 15 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.25, duration: 0.4 }}
                 onClick={() => handleNavClick('blog-preview')}
-                className="hover:opacity-60 transition-opacity cursor-pointer normal-case"
+                className="hover:opacity-60 transition-opacity cursor-pointer lowercase"
               >
-                Blog
+                blog
               </motion.button>
               <motion.button
                 initial={{ opacity: 0, y: 15 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.3, duration: 0.4 }}
                 onClick={() => handleNavClick('contact')}
-                className="hover:opacity-60 transition-opacity cursor-pointer uppercase"
+                className="hover:opacity-60 transition-opacity cursor-pointer lowercase"
               >
-                Contact
+                contact
               </motion.button>
             </nav>
           </motion.div>

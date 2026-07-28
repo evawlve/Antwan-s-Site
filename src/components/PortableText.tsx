@@ -26,12 +26,12 @@ const components = {
     },
   },
   block: {
-    h1: ({ children }: any) => <h1 className="text-3xl font-light tracking-wide mt-10 mb-4">{children}</h1>,
-    h2: ({ children }: any) => <h2 className="text-2xl font-light tracking-wide mt-8 mb-4">{children}</h2>,
-    h3: ({ children }: any) => <h3 className="text-xl font-light tracking-wide mt-6 mb-3">{children}</h3>,
-    normal: ({ children }: any) => <p className="mb-6 text-gray-700 leading-relaxed font-light text-base md:text-lg">{children}</p>,
+    h1: ({ children }: any) => <h1 className="text-3xl md:text-4xl font-bold tracking-tight text-black mt-10 mb-4">{children}</h1>,
+    h2: ({ children }: any) => <h2 className="text-2xl md:text-3xl font-bold tracking-tight text-black mt-8 mb-4">{children}</h2>,
+    h3: ({ children }: any) => <h3 className="text-xl md:text-2xl font-bold tracking-tight text-black mt-6 mb-3">{children}</h3>,
+    normal: ({ children }: any) => <p className="mb-6 text-gray-800 leading-relaxed font-normal text-base md:text-lg">{children}</p>,
     blockquote: ({ children }: any) => (
-      <blockquote className="border-l-2 border-black pl-6 my-8 italic text-gray-800 text-lg font-serif">
+      <blockquote className="border-l-2 border-black pl-6 my-8 italic text-gray-900 text-lg font-serif">
         {children}
       </blockquote>
     ),
