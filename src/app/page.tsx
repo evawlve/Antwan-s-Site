@@ -37,7 +37,7 @@ export default async function Home() {
       <SectionWrapper id="work" className="bg-gray-50">
         <div className="container mx-auto px-6 md:px-12 max-w-7xl">
           <div className="mb-12 text-center">
-            <h2 className="text-sm md:text-base font-medium tracking-[0.3em] uppercase text-gray-500 mb-4">Archive</h2>
+            <h2 className="text-sm md:text-base font-medium tracking-[0.3em] lowercase text-gray-500 mb-4">archive</h2>
           </div>
           <WorkGallery images={galleryImages} />
         </div>
@@ -47,13 +47,13 @@ export default async function Home() {
       <SectionWrapper id="blog-preview" className="bg-white border-t border-gray-100">
         <div className="container mx-auto px-6 md:px-12 max-w-7xl">
           <div className="mb-12 text-center">
-            <h2 className="text-sm md:text-base font-medium tracking-[0.3em] uppercase text-gray-500 mb-2">Journal & Stories</h2>
-            <p className="text-2xl md:text-3xl font-light tracking-tight text-black">Latest Blog Posts</p>
+            <h2 className="text-sm md:text-base font-medium tracking-[0.3em] lowercase text-gray-500 mb-2">journal & stories</h2>
+            <p className="text-2xl md:text-3xl font-light tracking-tight text-black">latest blog posts</p>
           </div>
 
           {featuredPosts.length === 0 ? (
-            <div className="text-center py-12 text-gray-400 font-light tracking-wider uppercase text-sm">
-              No blog posts published yet.
+            <div className="text-center py-12 text-gray-400 font-light tracking-wider lowercase text-sm">
+              no blog posts published yet.
             </div>
           ) : (
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -80,14 +80,14 @@ export default async function Home() {
                             sizes="(max-width: 768px) 100vw, 33vw"
                           />
                         ) : (
-                          <div className="w-full h-full flex items-center justify-center text-gray-300 uppercase tracking-widest text-xs">
-                            No Image
+                          <div className="w-full h-full flex items-center justify-center text-gray-300 lowercase tracking-widest text-xs">
+                            no image
                           </div>
                         )}
                       </div>
 
                       {formattedDate && (
-                        <p className="text-[10px] tracking-[0.2em] uppercase text-gray-400 mb-1">
+                        <p className="text-[10px] tracking-[0.2em] lowercase text-gray-400 mb-1">
                           {formattedDate}
                         </p>
                       )}
@@ -105,9 +105,9 @@ export default async function Home() {
           <div className="mt-12 text-center">
             <Link
               href="/blog"
-              className="inline-block px-8 py-3 text-xs uppercase tracking-[0.2em] border border-black hover:bg-black hover:text-white transition-colors duration-300"
+              className="inline-block px-8 py-3 text-xs lowercase tracking-[0.2em] border border-black hover:bg-black hover:text-white transition-colors duration-300"
             >
-              View All Posts →
+              view all posts →
             </Link>
           </div>
         </div>
